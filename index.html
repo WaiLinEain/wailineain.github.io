@@ -206,10 +206,18 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     background: var(--line);
     border: 1px solid var(--line);
+  }
+
+  @media (max-width: 720px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 440px) {
+    .grid { grid-template-columns: 1fr; }
   }
 
   .card {
